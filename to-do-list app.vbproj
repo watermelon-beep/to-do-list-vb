@@ -48,7 +48,9 @@
     <OptionInfer>On</OptionInfer>
   </PropertyGroup>
   <ItemGroup>
-    <Reference Include="System" />
+    <Reference Include="System">
+      <HintPath>..\..\..\..\..\..\Program Files (x86)\Reference Assemblies\Microsoft\Framework\.NETFramework\v4.7.2\System.dll</HintPath>
+    </Reference>
     <Reference Include="System.Data" />
     <Reference Include="System.Deployment" />
     <Reference Include="System.Drawing" />
@@ -73,12 +75,30 @@
     <Import Include="System.Threading.Tasks" />
   </ItemGroup>
   <ItemGroup>
-    <Compile Include="Form1.vb">
+    <Compile Include="DeleteTask.Designer.vb">
+      <DependentUpon>DeleteTask.vb</DependentUpon>
+    </Compile>
+    <Compile Include="DeleteTask.vb">
+      <SubType>UserControl</SubType>
+    </Compile>
+    <Compile Include="EditTask.Designer.vb">
+      <DependentUpon>EditTask.vb</DependentUpon>
+    </Compile>
+    <Compile Include="EditTask.vb">
+      <SubType>UserControl</SubType>
+    </Compile>
+    <Compile Include="taskForm.vb">
       <SubType>Form</SubType>
     </Compile>
-    <Compile Include="Form1.Designer.vb">
-      <DependentUpon>Form1.vb</DependentUpon>
+    <Compile Include="taskForm.Designer.vb">
+      <DependentUpon>taskForm.vb</DependentUpon>
       <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="markComplete.Designer.vb">
+      <DependentUpon>markComplete.vb</DependentUpon>
+    </Compile>
+    <Compile Include="markComplete.vb">
+      <SubType>UserControl</SubType>
     </Compile>
     <Compile Include="My Project\AssemblyInfo.vb" />
     <Compile Include="My Project\Application.Designer.vb">
@@ -97,8 +117,17 @@
     </Compile>
   </ItemGroup>
   <ItemGroup>
-    <EmbeddedResource Include="Form1.resx">
-      <DependentUpon>Form1.vb</DependentUpon>
+    <EmbeddedResource Include="DeleteTask.resx">
+      <DependentUpon>DeleteTask.vb</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="EditTask.resx">
+      <DependentUpon>EditTask.vb</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="taskForm.resx">
+      <DependentUpon>taskForm.vb</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="markComplete.resx">
+      <DependentUpon>markComplete.vb</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="My Project\Resources.resx">
       <Generator>VbMyResourcesResXFileCodeGenerator</Generator>
